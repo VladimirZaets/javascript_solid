@@ -1,3 +1,21 @@
 {
-  "template": "super_template"
+  "loader": {
+    "name": "PullRequest",
+    "config": {
+      "exclude": {
+        "labels": ["greenkeeper"]
+      },
+      "groupBy": {
+        "name" : "labels",
+        "config": {
+          "Enhancement": ["enhancement"]
+        }
+      }
+    }
+  },
+  "output": {
+    "override": false,
+    "template": "pullrequest-issue",
+    "filename": "CHANGELOG.md"
+  }
 }
